@@ -1,16 +1,81 @@
-# React + Vite
+# PixelByShah
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+PixelByShah is a modern personal portfolio website built with React and Vite. It highlights a senior graphic designer’s experience, featured work, tools, and professional journey through a polished, animated single-page experience.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive one-page portfolio layout
+- Animated hero and about sections using GSAP
+- Featured work showcases for FIFA and PIA projects
+- Experience section with tools and career journey
+- Clean and modern UI designed for visual storytelling
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite 8
+- GSAP + @gsap/react
+- CSS Modules-style component styling
+- ESLint for code quality
 
-## Expanding the ESLint configuration
+## 📁 Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+src/
+├── App.jsx
+├── App.css
+├── index.css
+├── main.jsx
+├── assets/
+│   └── work/
+└── components/
+    ├── about/
+    ├── experience/
+    ├── hero/
+    ├── navbar/
+    └── work/
+```
+
+## ▶️ Getting Started
+
+1. Install dependencies
+
+```bash
+npm install
+```
+
+2. Start the development server
+
+```bash
+npm run dev
+```
+
+3. Open the local URL shown in the terminal, usually:
+
+```bash
+http://localhost:5173
+```
+
+## 🧪 Available Scripts
+
+```bash
+npm run dev     # start the Vite development server
+npm run build   # create a production build
+npm run preview # preview the production build locally
+npm run lint    # run ESLint checks
+```
+
+## 🚀 Build for Production
+
+```bash
+npm run build
+```
+
+## 📦 Deployment
+
+This project can be deployed to platforms such as Vercel, Netlify, or any static hosting provider that supports Vite applications.
+
+## 👤 About the Project
+
+This portfolio was created to present professional work in a visually appealing and engaging way while keeping the experience fast, modern, and easy to navigate.
+
