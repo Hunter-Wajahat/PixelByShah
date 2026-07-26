@@ -1,0 +1,140 @@
+.toolsImages {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.experienceContainer {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding-top: 10px;
+}
+
+.toolsImages img {
+    /* height: 200px; */
+    object-fit: fill;
+    filter: grayscale();
+
+}
+
+.toolsImages img:hover {
+    filter: contrast();
+}
+
+.singleimgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 20%;
+    box-shadow: 0 0 8px 0px white;
+    cursor: pointer;
+}
+
+.experienceHead {
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    position: relative;
+    /* border: 1px solid red; */
+}
+
+.experienceHead span {
+    font-size: 20px;
+    position: absolute;
+    right: 40%;
+    bottom: -12px;
+
+}
+
+.toolsHead {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 10px 30px 10px 40px;
+}
+
+
+
+/* experience journey's css */
+.expJourney {
+    width: 100%;
+    height: auto;
+    background-color: var(--primary-color);
+    display: flex;
+    padding-top: 20px;
+
+
+}
+
+.expJourneyConainer {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding-top: 50px;
+}
+
+.expLeft {
+    width: 49.9%;
+    gap: 350px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.expCenterL {
+    width: 0.2%;
+    background-color: var(--secondary-color);
+}
+
+.expRight {
+    width: 49.9%;
+    padding-top: 300px;
+    gap: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.expjourneyHead {
+    padding: 10px;
+}
+
+.JourneyCard {
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    width: 80%;
+    height: auto;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 2%;
+    margin-left: 15%;
+
+}
+
+.JourneyCardRight {
+    border: 1px solid var(--secondary-color);
+    padding: 10px;
+    width: 80%;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 2%;
+    margin-left: 5%;
+
+}
+
+.journeyParagraph {
+    margin-top: 10px;
+}
+
+.companyName b {
+    color: var(--secondary-color);
+}
