@@ -70,25 +70,32 @@ const ExperienceJourney = () => {
             <div className="expJourney">
                 <div className="expLeft">
                     {journeyCardDataRight.map((data) => (
-                        <div key={data.key} className="JourneyCard">
-                            <h1 className="jobTitle">{data.jobTitle}</h1>
-                            <h2 className='companyName'>at <b>{data.companyName}</b></h2>
-                            <h3 className='jobDuration'>{data.duration}</h3>
-                            <h3 className='jobLocation'>Location: {data.location}📍</h3>
-                            <p className='journeyParagraph'> {data.description} </p>
+                        <div key={data.key} className="JourneyCardWrapper">
+                            <div className="JourneyCard">
+                                <h1 className="jobTitle">{data.jobTitle}</h1>
+                                <h2 className='companyName'>at <b>{data.companyName}</b></h2>
+                                <h3 className='jobDuration'>{data.duration}</h3>
+                                <h3 className='jobLocation'>Location: {data.location}📍</h3>
+                                <p className='journeyParagraph'> {data.description} </p>
+                            </div>
+                            <div className="timelineDot"></div>
                         </div>
                     ))}
                 </div>
                 <div className="expCenterL"></div>
                 <div className="expRight">
-                    {journeyCardDataLeft.map((data) =>(
-                    <div key={data.key} className="JourneyCardRight">
-                        <h1 className="jobTitle"> {data.jobTitle} </h1>
-                        <h2 className='companyName'>at <b> {data.location} </b></h2>
-                        <h3 className='jobDuration'> {data.duration} </h3>
-                        <h3 className='jobLocation'>Location: {data.location} 📍</h3>
-                        <p className='journeyParagraph'> {data.description} </p>
-                    </div>
+                    {journeyCardDataLeft.map((data) => (
+                        <div key={data.key} className="JourneyCardWrapperRight">
+                            <div className="JourneyCardRight">
+                                <h1 className="jobTitle"> {data.jobTitle} </h1>
+                                <h2 className='companyName'>at <b> {data.location} </b></h2>
+                                <h3 className='jobDuration'> {data.duration} </h3>
+                                <h3 className='jobLocation'>Location: {data.location} 📍</h3>
+                                <p className='journeyParagraph'> {data.description} </p>
+
+                            </div>
+                            <div className="timelineDotRight"></div>
+                        </div>
                     ))}
                 </div>
             </div>
