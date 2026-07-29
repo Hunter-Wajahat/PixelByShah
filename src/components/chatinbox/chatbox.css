@@ -1,0 +1,59 @@
+.chatCard{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    width:100%;
+    max-width:650px;
+    padding:16px;
+    border-radius:18px;
+    background:#111827;
+    border:1px solid rgba(255,255,255,.06);
+    transition:.25s ease;
+}
+
+.chatCard:hover{
+    border-color:rgba(255,255,255,.12);
+    background:#151d2d;
+}
+
+.chatAvatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+    flex-shrink:0;
+}
+
+.chatContent{
+    flex:1;
+}
+
+.chatHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:8px;
+}
+
+.chatName{
+    font-size:15px;
+    font-weight:600;
+    color:#fff;
+}
+
+.chatTime{
+    font-size:12px;
+    color:#8b95a7;
+}
+
+.chatBubble{
+    display:inline-block;
+    max-width:90%;
+    background:#1f2937;
+    color:#e5e7eb;
+    padding:12px 16px;
+    border-radius:14px;
+    line-height:1.6;
+    font-size:14px;
+    word-wrap:break-word;
+}
