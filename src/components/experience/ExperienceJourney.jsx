@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import './experience.css'
+import merkavoix from "../../assets/companyLogos/MerkaVoix.jfif"
+import multipleSolutions from "../../assets/companyLogos/MultipleSolutions.jfif"
+import nextNova from "../../assets/companyLogos/nextNova.jfif"
+import pieSolution from "../../assets/companyLogos/pieSolution.jfif"
+import printedToday from "../../assets/companyLogos/printedToday.png"
+import { useGSAP } from '@gsap/react'
+import gsap from 'gsap';
 
 const ExperienceJourney = () => {
+    const slide = useRef()
     const journeyCardDataRight = [
         {
             key: "printed-today-2015",
@@ -62,6 +70,26 @@ const ExperienceJourney = () => {
             description: "i worked here and Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis placeat laboriosam officia soluta aliquam incidunt eos quod expedita quos labore quasi obcaecati minus, amet nobis."
         },
     ]
+
+    useGSAP(() => {
+
+        const clone = slide.current.innerHTML;
+        slide.current.innerHTML += clone;
+
+        // Calculate the width of one full set of text
+        const trackWidth = slide.current.scrollWidth / 5;
+
+        // Create the infinite horizontal loop
+        gsap.to(".animateImg", {
+            x: -trackWidth,
+            duration: 15,       // Adjust speed (higher = slower)
+            ease: "none",       // Linear motion is required for tickers
+            repeat: -1,          // Loop infinitely
+            yoyo:true
+        });
+
+    }, {scope: slide.current})
+
     return (
         <>
             <div className="expJourneyConainer">
@@ -99,7 +127,14 @@ const ExperienceJourney = () => {
                     ))}
                 </div>
             </div>
-            
+            <div ref={slide} className="companySlideContainer">
+                <img className='theBox animateImg' src={merkavoix} alt="merkaVoix" />
+                <img className='theBox animateImg' src={multipleSolutions} alt="multiple Solutions" />
+                <img className='theBox animateImg' src={nextNova} alt="nextNova" />
+                <img className='theBox animateImg' src={pieSolution} alt="pie solution" />
+                <img className=' animateImg' src={printedToday} alt="printed today" />
+            </div>
+
         </>
     )
 }
