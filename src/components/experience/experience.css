@@ -66,6 +66,7 @@
     background-color: var(--primary-color);
     display: flex;
     padding-top: 20px;
+    padding-bottom: 20px;
 
 
 }
@@ -360,4 +361,20 @@
     100%{
         box-shadow:0 0 0 0 rgba(255,183,0,0);
     }
+}
+
+.companySlideContainer{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border: 1px solid rgb(47, 47, 47);
+    overflow-x:hidden ;
+    gap: 190px;
+}
+.companySlideContainer img{
+    height: 60px;
+}
+.companySlideContainer .theBox{
+    border-radius: 50%;
 }
