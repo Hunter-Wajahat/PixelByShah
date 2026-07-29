@@ -1,0 +1,7 @@
+.storyConainer{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: var(--text-color);
+    
+}
