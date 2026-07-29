@@ -78,7 +78,7 @@
 
 .expLeft {
     width: 49.9%;
-    gap: 350px;
+    gap: 450px;
     display: flex;
     flex-direction: column;
 
@@ -87,13 +87,22 @@
 
 .expCenterL {
     width: 0.2%;
-    background-color: var(--secondary-color);
+   background:
+    linear-gradient(
+        to bottom,
+        transparent,
+        var(--secondary-color),
+        var(--secondary-color),
+        transparent
+    );
+
+    position:relative;
 }
 
 .expRight {
     width: 49.9%;
-    padding-top: 300px;
-    gap: 350px;
+    padding-top: 350px;
+    gap: 450px;
     display: flex;
     flex-direction: column;
 }
@@ -102,22 +111,155 @@
     padding: 10px;
 }
 
+.JourneyCardWrapper {
+    position: relative;
+    width: min(520px, 90%);
+    margin-left: 25%;
+}
+
+.JourneyCardWrapperRight {
+    position: relative;
+    width: min(580px, 90%);
+    margin-left: 5%;
+}
+
 .JourneyCard {
-    border: 1px solid var(--secondary-color);
-    padding: 10px;
-    width: 80%;
-    height: auto;
+    border-radius:18px;
+    width: 110%;
+    padding: 28px;
+    border-radius: 18px;
+
+    background-color: #121212;
+    border: 1px solid rgba(255, 183, 0, .35);
+
     color: var(--text-color);
+
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
-    gap: 5px;
-    border-radius: 2%;
-    margin-left: 15%;
+    gap: 14px;
+
+    transition: .35s ease;
+    position: relative;
+    overflow: hidden;
+    height:320px ;
+    margin-left: -8%;
 
 }
 
+.JourneyCard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 1px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 183, 0, .8),
+            transparent 40%,
+            transparent 60%,
+            rgba(255, 183, 0, .3));
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.JourneyCard:hover {
+    cursor:pointer;
+    height: auto;
+    transform: translateY(-8px);
+    border-color: var(--secondary-color);
+
+    box-shadow:
+        0 15px 40px rgba(255, 183, 0, .15),
+        0 0 0 1px rgba(255, 183, 0, .2);
+}
+
+.JourneyCard::after{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:var(--secondary-color);
+}
+
 .JourneyCardRight {
+    border-radius:18px;
+     width: 100%;
+    padding: 28px;
+    border-radius: 18px;
+
+    background-color: #121212;
+    border: 1px solid rgba(255, 183, 0, .35);
+
+    color: var(--text-color);
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    transition: .35s ease;
+    position: relative;
+    overflow: hidden;
+    /* margin-left: 3%; */
+    height:320px ;
+
+}
+
+.JourneyCardRight::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 18px;
+    padding: 1px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 183, 0, .8),
+            transparent 40%,
+            transparent 60%,
+            rgba(255, 183, 0, .3));
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+}
+
+.JourneyCardRight:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary-color);
+
+    box-shadow:
+        0 15px 40px rgba(255, 183, 0, .15),
+        0 0 0 1px rgba(255, 183, 0, .2);
+}
+
+.JourneyCardRight::after{
+    content:"";
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:var(--secondary-color);
+}
+
+/* .JourneyCardRight {
     border: 1px solid var(--secondary-color);
     padding: 10px;
     width: 80%;
@@ -129,12 +271,93 @@
     border-radius: 2%;
     margin-left: 5%;
 
-}
+} */
 
 .journeyParagraph {
     margin-top: 10px;
 }
 
+.companyName{
+    color:var(--secondary-color);
+    font-size:1.35rem;
+    font-weight:700;
+}
+
 .companyName b {
     color: var(--secondary-color);
+}
+.jobDuration{
+    display:inline-flex;
+    width:fit-content;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    background:#262626;
+
+    color:#fff;
+
+    /* font-size:.85rem; */
+
+    border:1px solid rgba(255,183,0,.25);
+      opacity:.75;
+    font-size:.95rem;
+}
+.jobTitle{
+    font-size:2rem;
+    font-weight:800;
+    line-height:1.1;
+}
+.jobLocation{
+    opacity:.8;
+}
+.journeyParagraph{
+        margin-top:10px;
+
+    line-height:1.8;
+
+    color:#d8d8d8;
+}
+
+.timelineDot{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: -61px;
+    z-index: 2;
+    background-color: var(--secondary-color);
+    opacity: 0.9;
+
+    animation:pulse 2s infinite;
+}
+.timelineDotRight{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: -49px;
+    z-index: 2;
+    background-color: var(--secondary-color);
+    opacity: 0.9;
+
+    animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+
+    10%{
+        box-shadow:0 0 0 0 rgba(255,183,0,.6);
+    }
+
+    70%{
+        box-shadow:0 0 0 12px rgba(255,183,0,0);
+    }
+
+    100%{
+        box-shadow:0 0 0 0 rgba(255,183,0,0);
+    }
 }
