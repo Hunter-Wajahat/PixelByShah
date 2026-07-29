@@ -7,6 +7,7 @@ import Hero from './components/hero/Hero';
 import About from './components/about/About';
 import Work from './components/work/Work';
 import Experience from './components/experience/Experience';
+import TheTwoDollar from './components/TheTwoDollar/TheTwoDollar';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <About />
       <Work />
       <Experience />
+      <TheTwoDollar/>
     </>
   )
 }
