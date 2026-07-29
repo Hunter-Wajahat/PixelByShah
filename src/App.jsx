@@ -8,6 +8,7 @@ import About from './components/about/About';
 import Work from './components/work/Work';
 import Experience from './components/experience/Experience';
 import TheTwoDollar from './components/TheTwoDollar/TheTwoDollar';
+import ChatInbox from './components/chatinbox/ChatInbox';
 
 function App() {
   return (
