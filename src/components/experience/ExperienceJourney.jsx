@@ -99,6 +99,7 @@ const ExperienceJourney = () => {
                     ))}
                 </div>
             </div>
+            
         </>
     )
 }
