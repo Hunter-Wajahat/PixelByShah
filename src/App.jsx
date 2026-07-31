@@ -9,6 +9,7 @@ import Work from './components/work/Work';
 import Experience from './components/experience/Experience';
 import TheTwoDollar from './components/TheTwoDollar/TheTwoDollar';
 import ChatInbox from './components/chatinbox/ChatInbox';
+import Contact from './components/contact/Contact';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Work />
       <Experience />
       <TheTwoDollar/>
+      <Contact/>
     </>
   )
 }
