@@ -80,19 +80,19 @@ const Contact = () => {
         </a>
 
         <a
-          href="https://github.com/"
+          href="https://www.instagram.com/pixelbyshah/"
           target="_blank"
           rel="noopener noreferrer"
           className="contact-card"
         >
-          <img src="resources/github.png" alt="" />
+          <img src={image} alt="" />
 
           <div>
-            <h3>GitHub</h3>
-            <span>View my projects</span>
+            <h3>Instagram</h3>
+            <span>View my work on IG</span>
           </div>
 
-          <p>Open source & portfolio.</p>
+          <p>My ideas and works</p>
         </a>
 
       </div>
