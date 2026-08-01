@@ -62,6 +62,17 @@
     overflow-x: hidden;
     
 }
-.onlyImageContainer img {
-    
+
+
+@media(max-width: 768px){
+    .onlyImageContainer{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+   .imageAndTitleContainer {
+    width: 100%;
+    height: auto;
 }
+}
+
