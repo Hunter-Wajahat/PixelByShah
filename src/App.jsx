@@ -10,6 +10,7 @@ import Experience from './components/experience/Experience';
 import TheTwoDollar from './components/TheTwoDollar/TheTwoDollar';
 import ChatInbox from './components/chatinbox/ChatInbox';
 import Contact from './components/contact/Contact';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <Experience />
       <TheTwoDollar/>
       <Contact/>
+      <Footer/>
     </>
   )
 }
